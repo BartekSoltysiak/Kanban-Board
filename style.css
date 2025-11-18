@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+
+* {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #414345, #232526);
+    color: rgb(192, 192, 192);
+}
+
+/* GRID */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    text-align: center;
+    align-items: start;
+    padding: 20px;
+}
+
+/* GÓRNE DWA ELEMENTY */
+.div1 {
+    display: flex;
+    grid-column: 1 / span 4;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    height: 315px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.div2 {
+    grid-column: 5 / span 2;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* SEKCJE ZADAŃ */
+.div3, .div4, .div5 {
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    height: auto;
+    overflow: visible;
+}
+
+.div3 {
+    grid-column: 1 / span 2;
+}
+.div4 {
+    grid-column: 3 / span 2;
+}
+.div5 {
+    grid-column: 5 / span 2;
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 1100px) {
+    .parent {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .div1 { grid-column: 1 / span 4; }
+    .div2 { grid-column: 1 / span 4; }
+
+    .div3 { grid-column: 1 / span 2; }
+    .div4 { grid-column: 3 / span 2; }
+    .div5 { grid-column: 1 / span 4; margin-top: 20px; }
+}
+
+@media (max-width: 700px) {
+    .parent {
+        grid-template-columns: 1fr;
+    }
+
+    .div1, .div2, .div3, .div4, .div5 {
+        grid-column: 1 / span 1;
+    }
+}
+
+/* POLA I PRZYCISKI */
+input {
+    width: 50%;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+#new_task_button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#new_task_button:hover {
+    background-color: #45a049;
+}
+
+/* TEKSTY */
+.to_do { color: #ffcc00; }
+.in_progress { color: #0099ff; }
+.done_h1 { color: #33cc33; }
+
+/* KAFELKI ZADAŃ */
+.task {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.task_btn {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Animacja */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

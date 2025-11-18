@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="parent">
+
+    <div class="div1">
+        <h1>YOUR TO DO REMINDER WEBSITE</h1>
+    </div>
+
+    <div class="div2">
+        <h1>ADD TASK</h1>
+        <input type="text" id="task_name" name="task_name" placeholder="Task Name"><br><br>
+        <input type="text" name="desc" id="desc" placeholder="Description"><br><br>
+        <button id="new_task_button">ADD TASK</button>
+    </div>
+
+    <div class="div3 task_div">
+        <h1 class="to_do">TO DO</h1>
+
+        <!-- kontener na zadania -->
+        <div id="todo_list"></div>
+    </div>
+
+    <div class="div4 task_div">
+        <h1 class="in_progress">IN PROGRESS</h1>
+
+        <!-- kontener na zadania -->
+        <div id="progress_list"></div>
+    </div>
+
+    <div class="div5 task_div">
+        <h1 class="done_h1">DONE</h1>
+
+        <!-- kontener na zadania -->
+        <div id="done_list"></div>
+    </div>
+
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
